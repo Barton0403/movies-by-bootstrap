@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- normalize -->
+    <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="css/common.css" media="screen" title="no title">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- 导航 -->
+    <nav class="navbar navbar-default" role="navigation" style="">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                导航 <span class="glyphicon glyphicon-align-justify"></span>
+            </button>
+          <a class="navbar-brand" href="#">电影APP</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="list_movies.html">电影</a></li>
+          </ul>
+
+          <form class="navbar-form navbar-right" role="search" action="search.html" method="get">
+            <div class="form-group">
+              <input type="text" class="form-control" name="search" placeholder="搜索...">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#"></a>
+            </li>
+
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+
+    <section id="content" class="container">
+      <div class="row">
+        <style media="screen">
+          .fl-list .breadcrumb {
+            padding: 0px;
+            margin-bottom: 0px;
+            background-color: transparent;
+            margin-left: 4rem;
+          }
+
+          .fl-list .list-group-item>span {
+            float: left;
+          }
+        </style>
+        <ul class="list-group fl-list">
+          <li class="list-group-item">
+            <span style="">类型：</span>
+            <ul class="breadcrumb" style="">
+              <li class="active" data-state-val="{ catTagName:'全部'}">全部</li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'爱情'}" href="?catId=3">爱情</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'喜剧'}" href="?catId=2">喜剧</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'动画'}" href="?catId=4">动画</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'剧情'}" href="?catId=1">剧情</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'恐怖'}" href="?catId=6">恐怖</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'惊悚'}" href="?catId=7">惊悚</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'科幻'}" href="?catId=10">科幻</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'动作'}" href="?catId=5">动作</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'悬疑'}" href="?catId=8">悬疑</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'犯罪'}" href="?catId=11">犯罪</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'冒险'}" href="?catId=9">冒险</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'战争'}" href="?catId=12">战争</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'奇幻'}" href="?catId=14">奇幻</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'运动'}" href="?catId=15">运动</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'家庭'}" href="?catId=16">家庭</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'古装'}" href="?catId=17">古装</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'武侠'}" href="?catId=18">武侠</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'西部'}" href="?catId=19">西部</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'历史'}" href="?catId=20">历史</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'传记'}" href="?catId=21">传记</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'情色'}" href="?catId=22">情色</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'歌舞'}" href="?catId=23">歌舞</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'黑色电影'}" href="?catId=24">黑色电影</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'短片'}" href="?catId=25">短片</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'纪录片'}" href="?catId=13">纪录片</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'其他'}" href="?catId=100">其他</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <span>区域：</span>
+            <ul class="breadcrumb">
+              <li class="active" data-state-val="{ sourceTagName:'全部'}">全部</li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'大陆'}" href="?sourceId=2">大陆</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'美国'}" href="?sourceId=3">美国</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'韩国'}" href="?sourceId=7">韩国</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'日本'}" href="?sourceId=6">日本</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'中国香港'}" href="?sourceId=10">中国香港</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'中国台湾'}" href="?sourceId=13">中国台湾</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'泰国'}" href="?sourceId=9">泰国</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'印度'}" href="?sourceId=8">印度</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'法国'}" href="?sourceId=4">法国</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'英国'}" href="?sourceId=5">英国</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'俄罗斯'}" href="?sourceId=14">俄罗斯</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'意大利'}" href="?sourceId=16">意大利</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'西班牙'}" href="?sourceId=17">西班牙</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'德国'}" href="?sourceId=11">德国</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'波兰'}" href="?sourceId=19">波兰</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'澳大利亚'}" href="?sourceId=20">澳大利亚</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'伊朗'}" href="?sourceId=21">伊朗</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'其他'}" href="?sourceId=100">其他</a>
+              </li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <span>年代：</span>
+            <ul class="breadcrumb">
+              <li class="active" data-state-val="{ yearTagName:'全部'}">
+                全部
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'2017以后'}" href="?yearId=13">2017以后</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'2017'}" href="?yearId=12">2017</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'2016'}" href="?yearId=11">2016</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'2015'}" href="?yearId=10">2015</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'2014'}" href="?yearId=9">2014</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'2013'}" href="?yearId=8">2013</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'2012'}" href="?yearId=7">2012</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'2011'}" href="?yearId=6">2011</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'2000-2010'}" href="?yearId=5">2000-2010</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'90年代'}" href="?yearId=4">90年代</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'80年代'}" href="?yearId=3">80年代</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'70年代'}" href="?yearId=2">70年代</a>
+              </li>
+              <li>
+                <a data-act="tag-click" data-val="{TagName:'更早'}" href="?yearId=1">更早</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <style media="screen">
+      </style>
+      <div class="row">
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-5">
+          <a href="#" class="thumbnail">
+            <img src="http://h.hiphotos.baidu.com/baike/c0%3Dbaike180%2C5%2C5%2C180%2C60/sign=cf6f272dc5fdfc03f175ebeab556ecf1/72f082025aafa40f4c681f0ead64034f79f019b2.jpg" alt="">
+            <div class="caption">
+              <h3>变形金刚4</h3>
+              <p>变形金刚电影第四集</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 分页 -->
+    <nav style="text-align: center;">
+      <ul class="pagination">
+        <li class="disabled"><a href="#">&laquo;</a></li>
+        <li class="active"><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </nav>
+
+    <!-- 底部 -->
+    <footer id="footer" class="row" style="background-color: #ccc;padding-top:10px;">
+      <p class="text-center">©2016 电影APP movies.com</p>
+      <p class="text-center">Barton工作室</p>
+    </footer>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

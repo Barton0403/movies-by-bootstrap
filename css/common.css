@@ -1,0 +1,27 @@
+body,html {
+  font-family: '微软雅黑','幼圆','黑体','宋体';
+}
+
+.clear {
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.col-md-5 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 992px) {
+  .col-md-5 {
+    width: 20%;
+  }
+}
